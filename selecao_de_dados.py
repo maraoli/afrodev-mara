@@ -93,6 +93,5 @@ def selecao_de_dados():
     qtd_de_times_por_esporte_cada_pais = agrupamento['Name'].count()
     qtd_de_times_por_esporte_cada_pais = pd.DataFrame(qtd_de_times_por_esporte_cada_pais)
     qtd_de_times_por_esporte_cada_pais.columns = ['Total Names']
-    print(qtd_de_times_por_esporte_cada_pais)
 
-selecao_de_dados()
+    return total_de_atletas, total_de_homens , total_de_mulheres,  total_por_esporte
