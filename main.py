@@ -34,7 +34,7 @@ def obter_int(texto):
     return valor
 
 def saudacao():
-    print("Bem vindo ao sistema Consulta Atletas \n")
+    print("Bem vindo ao sistema Consulta Olimpíadas \n")
 
     print("Aqui você poderá obter diversas informações sobre atletas, times,  medalhas e muito mais.")
     print("Abaixo será presentado uma lista de opções para selecionar, pressione \"1\" para prosseguir")
