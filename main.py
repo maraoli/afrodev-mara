@@ -28,14 +28,14 @@ perguntas = [
 ,	["Quanto times por esporte cada país tem."]
 ]
 
-def obter_int():
+def obter_int(texto):
     valor = None
 
     while type(valor) != int:
         try:
             valor = int(valor)
         except:
-            valor = input("Insira um número: \n")
+            valor = input(f"{texto} \n")
 
     return valor
 
@@ -43,19 +43,24 @@ if __name__ == '__main__':
     print("Bem vindo ao sistema Consulta Atletas \n")
 
     print("Aqui você poderá obter diversas informações sobre atletas, times,  medalhas e muito mais.")
-    print("Abaixo será presentado uma lista de opções para selecionar, pressione \"enter\" para prosseguir")
+    print("Abaixo será presentado uma lista de opções para selecionar, pressione \"1\" para prosseguir")
     print("e em seguida digite o número da pergunta desejada que iremos lhe mostrar a resposta. \n")
-    print("Caso deseje encerrar o sistema digite ...  \n")
 
-    input("Pressione \"enter\" para prosseguir \n")
+    obter_int("Pressione \"1\" para prosseguir \n")
 
-    for i in range(len(perguntas)):
-        print(perguntas.index(perguntas[i]), "-", perguntas[i][0])
+    stop = None
 
-    perg_numero = obter_int()
+    while stop != 2 :
 
-    if(perguntas[perg_numero][1]):
-        print(f"A resposta para a pergunta: \"{perguntas[perg_numero][0]}\" é {perguntas[perg_numero][1]}")
+        for i in range(len(perguntas)):
+            print(perguntas.index(perguntas[i]), "-", perguntas[i][0])
+
+        perg_numero = obter_int("Digite um número")
+
+        if(perguntas[perg_numero][1]):
+            print(f"A resposta para a pergunta: \"{perguntas[perg_numero][0]}\" é {perguntas[perg_numero][1]} \n")
+
+        stop = obter_int("Pressione \"1\" para prosseguir e \"2\" para terminar a execussão deste programa.\n")
 
     #print(data5.head(3))
     #print(perguntas.index(perguntas[2]),perguntas[2])
