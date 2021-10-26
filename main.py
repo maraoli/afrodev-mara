@@ -19,7 +19,11 @@ perguntas = [
 ,	["Quantidade de treinadores por país."]
 ,	["País com a maior quantidade de treinadores"]
 ,	["Quantidade de treinadores por esporte."]
-,	["Quanto times por esporte cada país tem."]
+,	["Quantos times por esporte cada país tem."]
+,	["Mostre os paises que obtiveram 5 ou mais medalhas de ouro."]
+,	["Mostre a porcentagem de paises que obtiveram menos que 5 medalhas de ouro."]
+,	["Mostre o esporte com o maior número de mulheres."]
+,	["Mostre o esporte com o maior número de homens."]
 ]
 
 def obter_int(texto):
@@ -34,7 +38,7 @@ def obter_int(texto):
     return valor
 
 def saudacao():
-    print("Bem vindo ao sistema Consulta Olimpíadas \n")
+    print("Bem vindo ao Sistema Olimpíco \n")
 
     print("Aqui você poderá obter diversas informações sobre atletas, times,  medalhas e muito mais.")
     print("Abaixo será presentado uma lista de opções para selecionar, pressione \"1\" para prosseguir")
@@ -66,7 +70,7 @@ if __name__ == '__main__':
         print(f"A resposta para a pergunta: \"{perguntas[perg_numero][0]}\" é: \n")
         print(perguntas[perg_numero][1])
 
-        stop = obter_int("\n Pressione \"1\" para continuar e \"2\" para terminar a execussão deste programa.\n")
+        stop = obter_int("\n Pressione \"1\" para continuar e \"2\" para terminar a execução deste programa.\n")
 
 
 
